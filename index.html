@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Scarlet💜, will you be my Valentine? 💖</title>
+
+<style>
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  @keyframes heartbeat {
+    0% { transform: scale(1); }
+    25% { transform: scale(1.03); }
+    50% { transform: scale(1); }
+    75% { transform: scale(1.03); }
+    100% { transform: scale(1); }
+  }
+
+  .card {
+    background: #fff;
+    color: #d6336c;
+    padding: 2rem;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 420px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+    animation: heartbeat 2.5s infinite;
+    z-index: 10;
+  }
+
+  ul { list-style: none; padding: 0; margin: 1rem 0; }
+  li {
+    background: #ffe3ec;
+    margin: 0.5rem 0;
+    padding: 0.7rem;
+    border-radius: 12px;
+    color: #c2255c;
+  }
+
+  .buttons { margin-top: 1.5rem; display: flex; gap: 1rem; justify-content: center; }
+  button {
+    padding: 0.7rem 1.4rem;
+    border: none;
+    border-radius: 999px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+  .yes { background: #ff4d6d; color: white; }
+  .no { background: #ffd6e0; color: #c2255c; position: relative; }
+
+  .footer { margin-top: 1rem; font-size: 0.85rem; color: #868e96; }
+
+  .heart {
+    position: fixed;
+    top: -10px;
+    pointer-events: none;
+    animation: fall linear forwards;
+    z-index: 1;
+  }
+
+  @keyframes fall {
+    to {
+      transform: translateY(110vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <h1>Scarlet💜, will you be my Valentine? 💖</h1>
+  <p>Scarlet, kahit LDR tayo, ikaw pa rin ang pipiliin ko.</p>
+
+  <ul>
+    <li>🌏 Distance means nothing when you're my everything</li>
+    <li>💌 Isang click lang, pero buong puso ko na</li>
+    <li>🌙 Sa bawat timezone, ikaw ang iniisip ko</li>
+    <li>❤️ Nanliligaw pa lang, pero sigurado na ako</li>
+  </ul>
+
+  <div class="buttons">
+    <button class="yes" onclick="sayYes()">YES 💘</button>
+    <button class="no" id="noBtn">NO 🙈</button>
+  </div>
+
+  <div class="footer">Made with courage, kilig, and hearts</div>
+</div>
+
+<script src="script.js"></script>
+<audio id="bgMusic" src="ikot.mp3" loop></audio>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
